@@ -14,7 +14,6 @@ import javax.inject.Qualifier
 @Module
 @InstallIn(SingletonComponent::class)
 class ApiModule {
-
     @Provides
     @LocalApiAnnotation
     fun provideLocalAPI(): LocalApi = apiBuilder(LocalApi::class.java) {

@@ -8,7 +8,5 @@ import javax.inject.Inject
 class SampleRepositoryImpl @Inject constructor(
     @LocalApiAnnotation val localApi: LocalApi,
 ) : SampleRepository {
-    override suspend fun getHello() = result {
-        localApi.getHello()
-    }
+    override suspend fun getHello() = result { localApi.getHello() }
 }

@@ -20,7 +20,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.trungcs.androidnetwork.ui.theme.AndroidNetworkCertificateAuthorityTheme
-import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -43,8 +42,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Content(
-    viewModel: MainViewModel = viewModel(),
     modifier: Modifier = Modifier,
+    viewModel: MainViewModel = viewModel(),
 ) {
     Surface(modifier = modifier) {
         val uiState by viewModel.uiState.collectAsState()
@@ -72,7 +71,7 @@ fun LoadingView() {
 fun HelloView(hello: String, viewModel: MainViewModel) {
     CenterColumn(modifier = Modifier.fillMaxSize()) {
         Text(hello)
-        ElevatedButton(onClick = {viewModel.getHelloFromLocalServer()}) {
+        ElevatedButton(onClick = { viewModel.getHelloFromLocalServer() }) {
             Text(text = stringResource(id = R.string.reload))
         }
     }
@@ -83,7 +82,7 @@ fun HelloView(hello: String, viewModel: MainViewModel) {
 fun ErrorView(viewModel: MainViewModel) {
     CenterColumn(modifier = Modifier.fillMaxSize()) {
         Text(text = stringResource(id = R.string.demo_error_fetching_product))
-        ElevatedButton(onClick = {viewModel.getHelloFromLocalServer()}) {
+        ElevatedButton(onClick = { viewModel.getHelloFromLocalServer() }) {
             Text(text = stringResource(id = R.string.reload))
         }
     }

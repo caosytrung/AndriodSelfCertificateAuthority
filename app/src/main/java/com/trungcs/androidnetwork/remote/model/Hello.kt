@@ -7,4 +7,4 @@ data class Hello(
     @SerializedName("hello")
     @Expose
     val hello: String,
-    )
+)
