@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+
+<!--        <pin-set expiration="2025-01-01">-->
+<!--            <pin digest="SHA-256">hy9RaFvn+Wphkr79eiFPBF5QvOcHkYOGy/ppNY5mQuE=</pin>-->
+<!--        </pin-set>-->
+        // example <certificates src="@raw/xxx.crt" />
+        <trust-anchors>
+            <certificates src="@raw/[YOUR SEVER CERTIFICATE]" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
+
+
