@@ -59,7 +59,13 @@ const options = {
 https.createServer(options, app).listen(443);
 ~~~
 
-Run this command to start nodejs server that serve GET (/hello):
+Install packages:
+
+```
+npm install 
+```
+
+Run these command to start nodejs server that serve GET (/hello):
 ```
 node app.js
 ```
