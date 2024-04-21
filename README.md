@@ -65,7 +65,7 @@ Install packages:
 npm install 
 ```
 
-Run these command to start nodejs server that serve GET (/hello):
+Run these commands to start NodeJs server that serves GET (/hello):
 ```
 node app.js
 ```
